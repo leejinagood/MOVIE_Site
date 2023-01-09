@@ -11,6 +11,6 @@ public class HelloController {
 
     @GetMapping("hello")
     public List<String> hello() {
-        return Arrays.asList("ㅇㅇ", "ㅎㅏ이 이건 테스트임");
+        return Arrays.asList("로그인", "회원가입");
     }
 }
