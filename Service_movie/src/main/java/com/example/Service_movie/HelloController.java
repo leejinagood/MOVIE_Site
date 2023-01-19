@@ -1,5 +1,6 @@
 package com.example.Service_movie;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,20 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+        public static void main(String[] args) {
+            SpringApplication.run(com.example.Service_movie.ServiceMovieApplication.class, args);
+        }
 
-    @GetMapping("mypage")
-    public String mypage(){
-        return "마이페이지";
+    @GetMapping("/")
+    public String index() {
+        return "index.html";
     }
 
-    @GetMapping("login")
-    public String login(){
-        return "로그인";
     }
-
-    @GetMapping("signup")
-    public String signup(){
-        return "회원가입";
-    }
-
-}
