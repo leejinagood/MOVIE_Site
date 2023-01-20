@@ -10,7 +10,7 @@ public class HelloController {
         public static void main(String[] args) {
             SpringApplication.run(com.example.Service_movie.ServiceMovieApplication.class, args);
         }
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index() {
         return "index.html";
     }
