@@ -2,6 +2,7 @@ package com.example.Service_movie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -14,5 +15,6 @@ public class HelloController {
     public String index() {
         return "index.html";
     }
+
 
     }
