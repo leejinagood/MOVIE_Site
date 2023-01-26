@@ -32,5 +32,12 @@ public class HelloController {
     public String DaelimBox(){
         return "DAELIM BOX";
     }
-
+    @GetMapping("/user/movie")
+    public String movie(){
+        return "영화1";
+    }
+    @GetMapping("/user/ticketing")
+    public String ticketing(){
+        return "예매1";
+    }
     }
