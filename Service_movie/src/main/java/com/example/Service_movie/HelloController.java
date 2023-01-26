@@ -16,5 +16,21 @@ public class HelloController {
         return "index.html";
     }
 
+    @GetMapping("/user/login")
+    public String login(){
+        return "로그인1";
+    }
+    @GetMapping("/user/member")
+    public String member(){
+        return "회원가입2";
+    }
+    @GetMapping("/user/mytip")
+    public String mytip(){
+        return "내정보3";
+    }
+    @GetMapping("/user/DaelimBox")
+    public String DaelimBox(){
+        return "DAELIM BOX";
+    }
 
     }
