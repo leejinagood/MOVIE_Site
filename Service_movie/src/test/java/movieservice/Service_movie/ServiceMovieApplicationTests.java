@@ -1,4 +1,4 @@
-package com.example.Service_movie;
+package movieservice.Service_movie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

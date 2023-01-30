@@ -1,8 +1,8 @@
-//package com.example.User.Service;
+package movieservice.service.user;
 //
-//public class User {
+public class User {
 //    String login;
 //    public User(String login) {
 //        this.login = login;
 //    }
-//}
+}
