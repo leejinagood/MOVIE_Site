@@ -3,8 +3,11 @@ package movieservice.service.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+
+//@Controller
+@RestController // 임시 테스트용 RestController.
 @RequestMapping("/member")
 public class MemberController {
 
@@ -13,38 +16,33 @@ public class MemberController {
 //        return "/login";
 //    }
 
-    @GetMapping("/index")
-    public String index() {
-        return "index.html";
-    }
-
-    @GetMapping("/user/login")
-    public String login(){
+    @GetMapping("/login")
+    public String login() {
         return "로그인1";
     }
 
-    @GetMapping("/user/member")
-    public String member(){
+    @GetMapping
+    public String member() {
         return "회원가입2";
     }
 
-    @GetMapping("/user/mytip")
-    public String mytip(){
+    @GetMapping("/mytip")
+    public String mytip() {
         return "내정보3";
     }
 
-    @GetMapping("/user/DaelimBox")
-    public String DaelimBox(){
+    @GetMapping("/DaelimBox")
+    public String DaelimBox() {
         return "DAELIM BOX";
     }
 
-    @GetMapping("/user/movie")
-    public String movie(){
+    @GetMapping("/movie")
+    public String movie() {
         return "영화1";
     }
 
-    @GetMapping("/user/ticketing")
-    public String ticketing(){
+    @GetMapping("/ticketing")
+    public String ticketing() {
         return "예매1";
     }
 }
