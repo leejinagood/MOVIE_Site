@@ -9,6 +9,6 @@ public class BasicController {
     @GetMapping("/index")
     public String index() {
 //        return "index.html"; // 현재 resource 디렉토리에 index.html 파일이 없음.
-        return "xxx";
+        return "index.html";
     }
 }
