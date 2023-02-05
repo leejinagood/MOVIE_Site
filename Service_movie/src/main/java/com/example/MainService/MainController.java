@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //@Controller
 @RestController // 임시 테스트용 RestController.
-@RequestMapping("/member")
+@RequestMapping("/user")
 public class MainController {
 
 //    @GetMapping("/login")
@@ -22,7 +22,7 @@ public class MainController {
         return "로그인1";
     }
 
-    @GetMapping
+    @GetMapping("/member")
     public String member() {
         return "회원가입2";
     }
@@ -37,14 +37,5 @@ public class MainController {
         return "DAELIM BOX";
     }
 
-    @GetMapping("/movie")
-    public String movie() {
-        return "영화1";
-    }
-
-    @GetMapping("/ticketing")
-    public String ticketing() {
-        return "예매1";
-    }
 }
 

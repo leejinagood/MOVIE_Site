@@ -12,4 +12,5 @@ public class BasicController {
         return "index.html";
     }
 
+
 }
