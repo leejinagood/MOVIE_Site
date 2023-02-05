@@ -18,15 +18,15 @@ public class HelloController {
 
     @GetMapping("/user/login")
     public String login(){
-        return "로그인1";
+        return "로그인";
     }
     @GetMapping("/user/member")
     public String member(){
-        return "회원가입2";
+        return "회원가입";
     }
     @GetMapping("/user/mytip")
     public String mytip(){
-        return "내정보3";
+        return "내정보";
     }
     @GetMapping("/user/DaelimBox")
     public String DaelimBox(){
@@ -34,10 +34,10 @@ public class HelloController {
     }
     @GetMapping("/user/movie")
     public String movie(){
-        return "영화1";
+        return "영화";
     }
     @GetMapping("/user/ticketing")
     public String ticketing(){
-        return "예매1";
+        return "예매";
     }
     }
