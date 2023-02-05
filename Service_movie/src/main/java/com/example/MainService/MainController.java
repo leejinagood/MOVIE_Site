@@ -1,4 +1,5 @@
-package movieservice.service.controller;
+package com.example.MainService;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 //@Controller
 @RestController // 임시 테스트용 RestController.
 @RequestMapping("/member")
-public class MemberController {
+public class MainController {
 
 //    @GetMapping("/login")
 //    public String login() {
@@ -46,3 +47,4 @@ public class MemberController {
         return "예매1";
     }
 }
+

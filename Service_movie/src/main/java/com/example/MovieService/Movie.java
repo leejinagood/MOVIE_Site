@@ -1,11 +1,11 @@
-package movieservice.service.item;
+package com.example.MovieService;
 
 import lombok.Data;
-
 import java.util.Date;
 
+
 @Data
-public class Item {
+public class Movie {
 
     private Long Id;            // 영화 고유 ID (서비스에 등록된 순서, 자동 증가)
     private String itemName;    // 영화 이름 or 영화 ID
@@ -17,10 +17,10 @@ public class Item {
     private String actor;       // 출연자(배우)
     private String info;        // 영화 정보(줄거리 등)
 
-    public Item() {
+    public Movie() {
     }
 
-    public Item(String itemName, double rating, long total, String genre, Date releaseDate, String director, String actor, String info) {
+    public Movie(String itemName, double rating, long total, String genre, Date releaseDate, String director, String actor, String info) {
         this.itemName = itemName;
         this.rating = rating;
         this.total = total;
@@ -31,3 +31,4 @@ public class Item {
         this.info = info;
     }
 }
+

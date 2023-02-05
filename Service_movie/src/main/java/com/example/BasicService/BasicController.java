@@ -1,4 +1,4 @@
-package movieservice.service.controller;
+package com.example.BasicService;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,4 +11,5 @@ public class BasicController {
 //        return "index.html"; // 현재 resource 디렉토리에 index.html 파일이 없음.
         return "index.html";
     }
+
 }
