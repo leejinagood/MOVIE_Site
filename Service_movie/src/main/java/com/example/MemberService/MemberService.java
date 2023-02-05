@@ -1,4 +1,4 @@
 package com.example.MemberService;
 
-public class MemberContoroller {
+public class MemberService {
 }
