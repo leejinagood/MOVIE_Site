@@ -1,4 +1,4 @@
-package com.example.MovieService;
+package com.example.MovieService.Movie;
 
 import org.springframework.stereotype.Repository;
 
