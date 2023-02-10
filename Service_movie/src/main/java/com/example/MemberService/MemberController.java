@@ -19,11 +19,17 @@ public class MemberController {
         return "signup_form";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login_form";
+    }
+
     @PostMapping("/signup")
     public String signup(BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "signup_form";
         }
+
 
         return "redirect:/";
     }

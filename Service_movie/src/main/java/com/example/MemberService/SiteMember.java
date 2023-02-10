@@ -12,7 +12,7 @@ public class SiteMember {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String Userid;
+    private String userid;
 
     @Column(unique = true)
     private String password;
