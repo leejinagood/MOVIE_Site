@@ -1,23 +1,22 @@
 //package com.example.UserService;
 //
 //
-//import com.example.h2crud.domain.Members;
 //import lombok.AccessLevel;
 //import lombok.Getter;
 //import lombok.NoArgsConstructor;
 //
-//import java.time.LocalDateTime;
+//import java.lang.reflect.Member;
 //
 //@Getter
 //@NoArgsConstructor(access = AccessLevel.PACKAGE)
 //public class UserResponseDto {
-//    private Long userid; // PK
+//    private String userid; // PK
 //    private String email;
-//    private String passwd;
+//    private String password;
 //
-//    public UserResponseDto(Members member_table) {
+//    public UserResponseDto(Member member_table) {
 //        this.userid = member_table.getUserid();
 //        this.email = member_table.getEmail();
-//        this.passwd = member_table.getPasswd();
+//        this.password = member_table.getPassword();
 //    }
 //}

@@ -1,20 +1,23 @@
 //package com.example.UserService;
 //
 //
-//import com.example.h2crud.domain.Members;
 //import lombok.AccessLevel;
 //import lombok.Getter;
 //import lombok.NoArgsConstructor;
+//
+//import java.lang.reflect.Member;
 //
 //@Getter
 //@NoArgsConstructor(access = AccessLevel.PACKAGE)
 //public class UserRequestDto {
 //    private String email;
-//    private String passwd;
+//    private String password;
+//    private String userid;
 //
-//    public Members toEntity() {
-//        return Members.builder()
+//    public Member toEntity() {
+//        return Member.builder()
 //                .email(email)
-//                .passwd(passwd)
+//                .password(password)
+//                .userid(userid)
 //                .build();
 //    }}

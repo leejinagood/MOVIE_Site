@@ -12,7 +12,7 @@
 //    private final UserRepository memberRepository;
 //
 //    public UserResponseDto findBy(final UserRequestDto params){
-//        UserResponseDto entity = memberRepository.findByEmailAndPasswd(params.getEmail(), params.getPasswd());
+//        UserResponseDto entity = memberRepository.findByEmailAndPasswd(params.getEmail(), params.getPassword(), params.getUserid());
 //        return entity;
 //    }
 //

@@ -1,7 +1,7 @@
 //package com.example.UserService;
 //
 //
-//import com.example.MemberService.MemberService;
+//import com.example.UserService.UserService;
 //import lombok.RequiredArgsConstructor;
 //import org.springframework.web.bind.annotation.*;
 //
