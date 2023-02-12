@@ -34,6 +34,7 @@ public class MovieItemRepository {
     public void update(Long itemId, Movie updateItem) {
 
         Movie findItem = findById(itemId);
+
         findItem.setItemName(updateItem.getItemName());
         findItem.setRating(updateItem.getRating());
         findItem.setTotal(updateItem.getTotal());

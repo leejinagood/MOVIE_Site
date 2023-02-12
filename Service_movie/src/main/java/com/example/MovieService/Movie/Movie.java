@@ -1,13 +1,15 @@
 package com.example.MovieService.Movie;
 
+import com.example.MovieService.Item;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import java.util.Date;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class Movie {
+public class Movie extends Item {
 
-    private Long Id;            // 영화 고유 ID (서비스에 등록된 순서, 자동 증가)
-    private String itemName;    // 영화 이름 or 영화 ID
     private float rating;       // 영화 평점 ex) 0.0 ~ 5.0
     private Long total;         // 누적 관객수
     private String genre;       // 영화 장르
@@ -19,8 +21,7 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String itemName, float rating, Long total, String genre, Date releaseDate, String director, String actor, String info) {
-        this.itemName = itemName;
+    public Movie(float rating, Long total, String genre, Date releaseDate, String director, String actor, String info) {
         this.rating = rating;
         this.total = total;
         this.genre = genre;

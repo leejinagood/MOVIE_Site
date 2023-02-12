@@ -21,7 +21,7 @@ public class MovieController {
     @GetMapping
     public String items(Model model) {
         List<Movie> items = itemRepository.findAll();
-        model.addAttribute("items", items);
+//        model.addAttribute("items", items);
 //        return "movie/items";
         return "영화 목록";
     }
@@ -30,7 +30,7 @@ public class MovieController {
     @GetMapping("/{movieId}")
     public String item(@PathVariable long movieId, Model model) {
         Movie item = itemRepository.findById(movieId);
-        model.addAttribute("item", item);
+//        model.addAttribute("item", item);
 //        return "redirect:/movie/items/{movieId}";
         return "영화 정보";
     }
