@@ -1,15 +1,13 @@
 package com.example.MovieService.Reserve;
 
-import com.example.MovieService.Item;
+import com.example.MovieService.ItemDTO;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.util.Date;
 import java.util.Vector;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class Reserve extends Item {
+public class ReserveDTO extends ItemDTO {
 
     private Date time;              // 영화 예약 시간
     private String theater;         // 영화 상영관 숫자 ex) 1관, 2관
@@ -20,10 +18,10 @@ public class Reserve extends Item {
     private Vector<Seat> seat;      // 영화 상영관 좌석 행열 ex) D03, F11, H16
     private int headcount;          // 영화 예약 희망 인원 수
 
-    public Reserve() {
+    public ReserveDTO() {
     }
 
-    public Reserve(String itemName, Date time, String theater, String type, Long price, Long totalSeat, Long leftSeat, Vector<Seat> seat, int headcount) {
+    public ReserveDTO(String itemName, Date time, String theater, String type, Long price, Long totalSeat, Long leftSeat, Vector<Seat> seat, int headcount) {
         super(itemName);
         this.time = time;
         this.theater = theater;

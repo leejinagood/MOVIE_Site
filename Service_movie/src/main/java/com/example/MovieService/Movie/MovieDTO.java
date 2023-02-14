@@ -1,6 +1,6 @@
 package com.example.MovieService.Movie;
 
-import com.example.MovieService.Item;
+import com.example.MovieService.ItemDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -8,7 +8,7 @@ import java.util.Date;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Movie extends Item {
+public class MovieDTO extends ItemDTO {
 
     private float rating;       // 영화 평점 ex) 0.0 ~ 5.0
     private Long total;         // 누적 관객수
@@ -18,10 +18,10 @@ public class Movie extends Item {
     private String actor;       // 출연자(배우)
     private String info;        // 영화 정보(줄거리 등)
 
-    public Movie() {
+    public MovieDTO() {
     }
 
-    public Movie(float rating, Long total, String genre, Date releaseDate, String director, String actor, String info) {
+    public MovieDTO(float rating, Long total, String genre, Date releaseDate, String director, String actor, String info) {
         this.rating = rating;
         this.total = total;
         this.genre = genre;
