@@ -2,8 +2,9 @@ package com.example.MovieService.Reserve;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.PostConstruct;
 
 @Controller
 @RequestMapping("/reserve")
@@ -11,35 +12,37 @@ import org.springframework.web.bind.annotation.*;
 public class ReservationController {
 
     private final ReserveItemRepository itemRepository;
-    private final ReserveService reserveService;
 
     @ResponseBody
-    @GetMapping("/{movieId}")
-    public String reserve(@PathVariable long movieId, Model model) {
+    @PostMapping("/{movieId}")
+    public String reserve(@PathVariable long movieId, @ModelAttribute ReserveDTO reserveDTO) {
+
         ReserveDTO reserveItem = itemRepository.findById(movieId);
-//        model.addAttribute("reserve", reserveItem);
 
-        // 다른 클래스에 데이터 검사 메소드 필요
-        if (reserveService.isSuccess()) {
+        if (reserveItem == null) return "예약 실패"; // return "/fail"; // movieId에 해당하는 영화가 없을 때, "/fail" 매핑 호출
 
-        }
+        itemRepository.save(reserveDTO);
 
 //        return "/success";
-//        return "/fail";
-
-        return "영화 아이디 : {movieId} 예약 창"; // 임시 리턴값
+        return "영화 아이디 : " + movieId + "예약 성공";
     }
 
     @ResponseBody
     @PostMapping("/success")
-    public String success(@RequestParam long movieId,
-                          @RequestParam String alphabet,
-                          @RequestParam int number,
-                          Model model) {
+    public String success(ReserveDTO reserveDTO) {
+        ReserveDTO dto = itemRepository.findById(reserveDTO.getId());
+        return "영화 아이디 : " + dto.getId() + " 예약 성공"; // 임시 리턴값
+    }
 
-        ReserveDTO reserve = new ReserveDTO();
+    @ResponseBody
+    @PostMapping("/fail")
+    public String fail(ReserveDTO reserveDTO) {
+//        return "/" + reserveDTO.getId();
+        return "영화 예약 실패";
+    }
 
-//        model.addAttribute("", reserveItem);
-        return "영화 아이디 : {movieId} 예약 성공"; // 임시 리턴값
+    @PostConstruct
+    public void init() { // 컨트롤러가 실행되었을 때 처음으로 실행되는 메소드
+
     }
 }
