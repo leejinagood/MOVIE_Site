@@ -5,23 +5,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/reserve")
 @RequiredArgsConstructor
 public class ReservationController {
 
-    private final ReserveItemRepository itemRepository;
+    private final ReserveRepository itemRepository;
 
     @ResponseBody
     @PostMapping("/{movieId}")
     public String reserve(@PathVariable long movieId, @ModelAttribute ReserveDTO reserveDTO) {
 
-        ReserveDTO reserveItem = itemRepository.findById(movieId);
+        Optional<ReserveDTO> reserveItem = itemRepository.findById(movieId);
 
-        if (reserveItem == null) return "예약 실패"; // return "/fail"; // movieId에 해당하는 영화가 없을 때, "/fail" 매핑 호출
+        if (reserveItem.isEmpty()) return "예약 실패"; // return "/fail"; // movieId에 해당하는 영화가 없을 때, "/fail" 매핑 호출
 
-        itemRepository.save(reserveDTO);
+//        itemRepository.save(reserveDTO);
 
 //        return "/success";
         return "영화 아이디 : " + movieId + "예약 성공";
@@ -30,14 +31,14 @@ public class ReservationController {
     @ResponseBody
     @PostMapping("/success")
     public String success(ReserveDTO reserveDTO) {
-        ReserveDTO dto = itemRepository.findById(reserveDTO.getId());
-        return "영화 아이디 : " + dto.getId() + " 예약 성공"; // 임시 리턴값
+        Optional<ReserveDTO> dto = itemRepository.findById(reserveDTO.getId());
+        return "영화 아이디 : " + dto.get().getId() + " 예약 성공"; // 임시 리턴값
     }
 
     @ResponseBody
     @PostMapping("/fail")
     public String fail(ReserveDTO reserveDTO) {
-//        return "/" + reserveDTO.getId();
+//        return "/reserve/" + reserveDTO.getId();
         return "영화 예약 실패";
     }
 

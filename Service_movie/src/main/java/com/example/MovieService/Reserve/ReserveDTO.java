@@ -1,12 +1,14 @@
 package com.example.MovieService.Reserve;
 
 import com.example.MovieService.ItemDTO;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Entity;
 import java.util.Date;
 import java.util.Vector;
 
-@Data
+@Getter @Setter @Entity
 public class ReserveDTO extends ItemDTO {
 
     private Date time;              // 영화 예약 시간

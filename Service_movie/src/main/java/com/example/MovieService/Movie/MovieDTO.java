@@ -1,13 +1,13 @@
 package com.example.MovieService.Movie;
 
 import com.example.MovieService.ItemDTO;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Entity;
 import java.util.Date;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
+@Getter @Setter @Entity
 public class MovieDTO extends ItemDTO {
 
     private float rating;       // 영화 평점 ex) 0.0 ~ 5.0

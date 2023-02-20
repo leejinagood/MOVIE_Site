@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/movie")
 @RequiredArgsConstructor
 public class MovieController {
 
-    private final MovieItemRepository itemRepository;
+    private final MovieRepository itemRepository;
 
     @ResponseBody
     @GetMapping
@@ -29,7 +30,7 @@ public class MovieController {
     @ResponseBody
     @GetMapping("/{movieId}")
     public String item(@PathVariable long movieId, Model model) {
-        MovieDTO item = itemRepository.findById(movieId);
+        Optional<MovieDTO> item = itemRepository.findById(movieId);
         model.addAttribute("item", item);
 //        return "redirect:/movie/items/{movieId}";
         return "영화 정보"; // 임시 리턴값
