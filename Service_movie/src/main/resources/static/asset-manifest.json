@@ -1,18 +1,39 @@
 {
   "files": {
-    "main.css": "/static/css/main.45dad730.css",
-    "main.js": "/static/js/main.f5c1095f.js",
+    "main.css": "/static/css/main.5df58f6e.css",
+    "main.js": "/static/js/main.e799d3e2.js",
     "static/js/787.71df535f.chunk.js": "/static/js/787.71df535f.chunk.js",
+    "static/media/poster01.jpg": "/static/media/poster01.2210fb4ba4ca1df8b78f.jpg",
     "static/media/swiper01.jpg": "/static/media/swiper01.c584a5db23a1de78796e.jpg",
     "static/media/swiper02.jpg": "/static/media/swiper02.c584a5db23a1de78796e.jpg",
     "static/media/swiper03.jpg": "/static/media/swiper03.c584a5db23a1de78796e.jpg",
+    "static/media/poster03.jpg": "/static/media/poster03.99746151d083dc023ee4.jpg",
+    "static/media/poster02.jpg": "/static/media/poster02.92775a9362b00121306d.jpg",
+    "static/media/Poster2.jpg": "/static/media/Poster2.b0c9bc2135dd925538ef.jpg",
+    "static/media/poster04.jpg": "/static/media/poster04.a03a0be05017c4eb8bc3.jpg",
+    "static/media/Poster10.jpg": "/static/media/Poster10.f3524264bb420a2c7a8d.jpg",
+    "static/media/Poster09.jpg": "/static/media/Poster09.5f68b2d5c58666af7a2b.jpg",
+    "static/media/Poster08.jpg": "/static/media/Poster08.9a34a60e2e4260291942.jpg",
+    "static/media/Poster06.jpg": "/static/media/Poster06.cb6105bceb30204e66e4.jpg",
+    "static/media/Poster05.jpg": "/static/media/Poster05.a6a11ab06af2698eac9a.jpg",
+    "static/media/Poster11.jpg": "/static/media/Poster11.14b33242729df548cf5b.jpg",
+    "static/media/Poster.jpg": "/static/media/Poster.0a268f2d45f02a7dbd37.jpg",
+    "static/media/Poster04.jpg": "/static/media/Poster04.0492d8d0664effcffb30.jpg",
+    "static/media/Poster3.jpg": "/static/media/Poster3.02326492345b0234335f.jpg",
+    "static/media/movie03.jpg": "/static/media/movie03.d02bb48a11d72cf1af78.jpg",
+    "static/media/Poster07.jpg": "/static/media/Poster07.f45db2c8bd93444b9f5d.jpg",
+    "static/media/movie02.jpg": "/static/media/movie02.07580b345c3a947e0760.jpg",
+    "static/media/movie01.jpg": "/static/media/movie01.418180e74e1cc03dfa1c.jpg",
+    "static/media/card.jpg": "/static/media/card.1e463586735712531b62.jpg",
+    "static/media/Samsungfire.png": "/static/media/Samsungfire.dd9543b1e64f33382ecd.png",
+    "static/media/car.png": "/static/media/car.d1a1b0163ebc77214789.png",
     "index.html": "/index.html",
-    "main.45dad730.css.map": "/static/css/main.45dad730.css.map",
-    "main.f5c1095f.js.map": "/static/js/main.f5c1095f.js.map",
+    "main.5df58f6e.css.map": "/static/css/main.5df58f6e.css.map",
+    "main.e799d3e2.js.map": "/static/js/main.e799d3e2.js.map",
     "787.71df535f.chunk.js.map": "/static/js/787.71df535f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45dad730.css",
-    "static/js/main.f5c1095f.js"
+    "static/css/main.5df58f6e.css",
+    "static/js/main.e799d3e2.js"
   ]
 }
