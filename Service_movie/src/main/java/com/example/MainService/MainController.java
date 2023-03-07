@@ -1,11 +1,9 @@
 package com.example.MainService;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 //@Controller
 @RestController // 임시 테스트용 RestController.
@@ -19,17 +17,17 @@ public class MainController {
 
     @GetMapping("/login")
     public String login() {
-        return "로그인1";
+        return "로그인";
     }
 
     @GetMapping("/member")
     public String member() {
-        return "회원가입2";
+        return "회원가입";
     }
 
     @GetMapping("/mytip")
     public String mytip() {
-        return "내정보3";
+        return "내정보";
     }
 
     @GetMapping("/DaelimBox")
